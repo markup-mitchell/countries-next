@@ -44,8 +44,8 @@ function Country({country}) {
     <div>
     <CountryPageHeading title={country.name.common} image={country.flags.svg} />
     <p>Official Name: {country.altSpellings[1]}</p>
-    <p>Native Name: {country.name.native}</p>
-    <p>Japanese Name: {country.translations.ja}</p>
+    {/* <p>Native Name: {country.name[Object.keys(country.name.nativeName)[0]]}</p> */}
+    <p>Japanese Name: {country.translations.jpn.official}</p>
 
     <p>Population Density: {Math.floor(country.population / country.area)} per km<sup>2</sup></p>
     </div>
