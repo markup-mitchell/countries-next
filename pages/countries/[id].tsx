@@ -1,5 +1,6 @@
 
 import { GetStaticProps } from 'next'
+import CountryPageHeading from '../../components/CountryPageHeading';
 
   // TODO
   // Interface/type for country
@@ -43,8 +44,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 function Country({country}) {
   return (
     <div>
-    <h1>Country Name: {country.name}</h1>
-    <img src={country.flag} alt={`flag of ${country.name}`} />
+    <h1>Country Name: {country.name} <img src={country.flag} alt={`flag of ${country.name}`} /></h1>
+    <CountryPageHeading title={country.name} image={country.flag} />
+    <p>Official Name: {country.altSpellings[1]}</p>
+    <p>Native Name: {country.nativeName}</p>
+    <p>Japanese Name: {country.translations.ja}</p>
+    <p>Flag: {country.flag}</p>
+    <p>Population Density: {Math.floor(country.population / country.area)} per km<sup>2</sup></p>
     </div>
   )
 }
