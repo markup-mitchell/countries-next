@@ -8,7 +8,7 @@ export const getStaticProps = async () => {
 }
 
 const Countries = ({countries}) => {
-  return countries.map(country => <div key={country.cca2}>{country.name}</div>)
+  return countries.map(country => <div key={country.cca2}>{country.name.common}</div>)
 }
 
 export default Countries
