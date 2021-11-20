@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 
   // Get the paths we want to pre-render based on  countries
   const paths = countries.map((country) => ({
-    params: { id: country.name },
+    params: { id: country.alpha2Code },
   }))
 
   // console.log(paths)
