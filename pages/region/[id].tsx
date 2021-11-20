@@ -21,9 +21,14 @@ export const getStaticProps = async ({ params }) => {
 
 function Region({region}) {
   return (
-    region.map(country => <Link href={`/countries/${country.cca2}`}>
+    <ul>
+
+    {region.map(country => <li key={country.cca2}>
+      <Link href={`/countries/${country.cca2}`}>
       <a>{country.name.common}</a>
       </Link>)
-  )
-}
+      </li>
+  )}
+    </ul>
+  )}
 export default Region;
