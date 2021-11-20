@@ -12,10 +12,10 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps = async ({ params }) => {
-  console.log(params)
+  // console.log(params)
   const res = await fetch(`https://restcountries.com/v3.1/region/${params.id}`);
   const region = await res.json();
-  console.log(region)
+  // console.log(region)
   return { props: { region } }
 }
 

@@ -26,7 +26,7 @@ export async function getStaticPaths() {
 
 // This also gets called at build time
 export const getStaticProps = async ({ params }) => {
-  console.log(params)
+  // console.log(params)
   // params contains the country `id`.
   // If the route is like /countries/France, then params.id is France
   const res = await fetch(`https://restcountries.com/v3.1/alpha/${params.id}`);
