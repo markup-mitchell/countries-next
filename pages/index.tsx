@@ -7,6 +7,7 @@ function HomePage() {
 		<>
 			<Head>
 				<title>World Countries | Regions</title>
+				<meta name="description" content="UI for countries REST API" />
 			</Head>
 			<Layout>
 				<h1>Regions</h1>

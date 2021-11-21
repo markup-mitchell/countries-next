@@ -40,7 +40,8 @@ function Country({ country }) {
 	return (
 		<>
 			<Head>
-				<title>Country Details | {country.name.common}</title>
+				<title>World Countries | {country.name.common}</title>
+				<meta name="description" content="UI for countries REST API" />
 			</Head>
 			<Layout>
 				<CountryPageHeading

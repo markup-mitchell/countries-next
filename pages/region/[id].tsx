@@ -24,7 +24,8 @@ function Region({ region }) {
 	return (
 		<>
 			<Head>
-				<title>Country List | {region[0].region}</title>
+				<title>CWorld Countries | {region[0].region}</title>
+				<meta name="description" content="UI for countries REST API" />
 			</Head>
 			<Layout>
 				<h1>{region[0].region}</h1>
