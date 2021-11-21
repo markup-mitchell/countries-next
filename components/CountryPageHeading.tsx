@@ -6,7 +6,7 @@ const CountryPageHeading = ({ title, image }) => {
 			<div className="heading-row">
 				<h1>{title}</h1>
 				<div className="flag-wrapper">
-					<Image src={image} layout="fill" objectFit="contain" />
+					<Image src={image} layout="fill" objectFit="contain" alt="" />
 				</div>
 			</div>
 			<style jsx>

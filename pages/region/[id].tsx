@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import Head from 'next/head';
+
 import Layout from '../../components/Layout';
 
 export async function getStaticPaths() {
@@ -20,18 +22,23 @@ export const getStaticProps = async ({ params }) => {
 
 function Region({ region }) {
 	return (
-		<Layout>
-			<h1>{region[0].region}</h1>
-			<ul>
-				{region.map((country) => (
-					<li key={country.cca2}>
-						<Link href={`/countries/${country.cca2}`}>
-							<a>{country.name.common}</a>
-						</Link>
-					</li>
-				))}
-			</ul>
-		</Layout>
+		<>
+			<Head>
+				<title>Country List | {region[0].region}</title>
+			</Head>
+			<Layout>
+				<h1>{region[0].region}</h1>
+				<ul>
+					{region.map((country) => (
+						<li key={country.cca2}>
+							<Link href={`/countries/${country.cca2}`}>
+								<a>{country.name.common}</a>
+							</Link>
+						</li>
+					))}
+				</ul>
+			</Layout>
+		</>
 	);
 }
 export default Region;
