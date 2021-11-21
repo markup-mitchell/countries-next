@@ -18,6 +18,12 @@ const CountryPageHeading = ({ title, image }) => {
 						display: flex;
 						justify-content: space-between;
 					}
+
+					@media (min-width: 900px) {
+						.heading-row {
+							justify-content: unset;
+						}
+					}
 					.flag-wrapper {
 						position: relative;
 						width: 100px;
