@@ -21,6 +21,7 @@ export const getStaticProps = async ({ params }) => {
 function Region({ region }) {
 	return (
 		<Layout>
+			<h1>{region[0].region}</h1>
 			<ul>
 				{region.map((country) => (
 					<li key={country.cca2}>

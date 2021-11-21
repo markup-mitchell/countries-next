@@ -15,6 +15,7 @@ const Layout = ({ children }) => {
 					background: var(--color__900);
 				}
 				.page {
+					display: flex;
 					color: var(--color__100);
 					justify-content: center;
 					padding: var(--standard-padding);
@@ -22,7 +23,6 @@ const Layout = ({ children }) => {
 				main {
 					width: 100%;
 					max-width: 900px;
-					margin-top: 1rem;
 				}
 			`}</style>
 		</div>

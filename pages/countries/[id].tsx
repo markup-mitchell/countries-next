@@ -3,10 +3,6 @@ import Image from 'next/image';
 import CountryPageHeading from '../../components/CountryPageHeading';
 import Layout from '../../components/Layout';
 
-// TODO
-// Interface/type for country
-// Interface/type for params
-
 // This function gets called at build time
 export async function getStaticPaths() {
 	// Get all the countries
